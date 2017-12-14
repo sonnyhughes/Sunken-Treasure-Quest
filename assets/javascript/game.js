@@ -37,40 +37,53 @@ $(".emerald").click(function() {
 
 // Reset function for after you win or lose
 function reset() {
-	// Generates a new number to guess.
+	
+	// Generates a new number.
 	number = Math.floor((Math.random() * 102) + 19);
-	// Displays that number on the page.
+	
+	// Displays the target number to player.
 	$(".targetscore").html(number);
-	// Generates new values for the crystals.
+	
+	// Generates new values for the gemstones.
 	sapphire = Math.floor((Math.random() * 12) + 1);
 	ruby = Math.floor((Math.random() * 12) + 1);
 	amethyst = Math.floor((Math.random() * 12) + 1);
 	emerald = Math.floor((Math.random() * 12) + 1);
-	// Resets the total guess to 0.
+	
+	// Resets the current score to 0.
 	yourScore = 0;
-	// Displays the score total.
+	
+	// Displays the player score.
 	$(".yourscore").html(yourScore);
 };
 
 // Updates the total guesses 
 function update(color) {
+	
 	// Increases the total guess by the value of the chosen crystal.
 	yourScore += color;
-	// Removes the old total and replaces it with the new total. 
+
+	// Removes the previous score and replaces it with the new score. 
 	$(".yourscore").empty();
 	$(".yourscore").append(yourScore);
-	// Checks to see if you win or lose.
+	
+	// If statement to determine if you win or lose.
 	if (yourScore > number) {
-		// Adds a loss.
+		
+		// Adds to losses.
 		losses++;
-		// Displays updated losses.
+		
+		// Updated losses.
 		$("#losses").html(losses);
+		
 		// Calls the reset function to reset the game.
 		reset();
+		
 		// Updates longest streak if it gets broken.
 		if (currentStreak > longestStreak) {
 			longestStreak = currentStreak;
 		};
+		
 		// Resets current streak.
 		currentStreak = 0
 		// Displays the updated streak information.
@@ -78,20 +91,27 @@ function update(color) {
 		$("#alltimestreak").html(longestStreak);
 
 	} else if (yourScore == number) {
-		// Adds a win.
+		
+		// Adds to wins.
 		wins++;
-		// Displays the updated wins.
+		
+		// Updated wins.
 		$("#wins").html(wins);
+		
 		// Calls the reset function to reset the game.
 		reset();
+		
 		// Adds 1 to the current streak.
 		currentStreak++;
+		
 		// Displays the current streak.
 		$("#winningstreak").html(currentStreak);
+		
 		// Updates longest streak if it gets broken.
 		if (currentStreak > longestStreak) {
 			longestStreak = currentStreak;
 		};
+		
 		// Displays the updated streak information.
 		$("#alltimestreak").html(longestStreak);
 
