@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sunken Treasure Quest!</title>
+
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet" type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Share:400i" rel="stylesheet" type='text/css'>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+
+	<!-- jQuery -->
+	<script src="assets/javascript/jquery-1.12.0.min.js"></script>
+
+	<!-- Javascript -->
+	<script src="assets/javascript/game.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</head>
+
+<body>
+
+	<!-- Page Container -->
+	<div class="container">
+
+		<!-- Header -->
+		<div class="row header">
+			<div class="col-md-12 text-center">
+				<h1>Sunken Treasure Quest!</h1>
+			</div>
+		</div>
+		
+		<br><br>
+
+		<!-- Game Play Section -->
+		<div class="row">
+
+			<!-- Leader Board -->
+			<div class="col-md-6 col-sm-12">
+				<div class="col-md-12 text-center stats">
+					<h2 class="underline">Leader Board</h2>
+					<h3>Wins: <span id="wins">0</span></h3>
+					<h3>Losses: <span id="losses">0</span></h3>
+					<h3>Winning Streak: <span id="winningstreak">0</span></h3>
+					<h3>All-time Winning Streak: <span id="alltimestreak">0</span></h3>
+				</div>
+			</div>
+
+			<!-- Scorecard and Gem Buttons -->
+			<div class="col-md-6 col-sm-12 text-center">
+				<div class="col-md-12 col-sm-12">
+					<h2>Target Score: <span class="targetscore"></h2>
+				</div>
+				<div class="col-md-12 col-sm-12">
+					<h2>Your Score: <span class="yourscore">0</span></h2>
+				</div>
+
+				<div class="col-md-12 col-sm-12">
+					<br><br>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<img class="sapphire" src="assets/images/Sapphire.png">
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<img class="ruby" src="assets/images/Ruby.png">
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<img class="amethyst" src="assets/images/Amethyst.png">
+					</div>
+					<div class="col-md-3 col-sm-3 col-xs-3">
+						<img class="emerald" src="assets/images/Emerald.png">
+					</div>
+				</div>
+			</div>
+
+		<!-- Close Game Play Row -->
+		</div>
+		
+		<br><br>
+
+		<!-- How to Play Row -->
+		<div class="row">
+			<h2 class="col-md-12 col-sm-12">How to play:</h2>
+			<div class="instructions col-md-12 col-sm-12">
+				<p>The goal is to match your score with the target score.  Each crystal has a hidden value assigned every round.</p>
+				<p>Clicking the gemstones will add that value to you score.  If you can match your score without going over, you win!</p>
+			</div>
+		</div>
+
+
+	<!-- Close Page Container -->
+	</div>
+
+</body>
+</html>
